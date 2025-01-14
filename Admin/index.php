@@ -1,9 +1,8 @@
 <?php
 $request = $_SERVER['REQUEST_URI'];
-$baseDir = '/mockTest_v1';
+$baseDir = '/mockTest_v1/Admin';
 $request = parse_url($request, PHP_URL_PATH);
 $request = str_replace($baseDir, '', $request);
-//print_r($request);
 
 switch ($request) {
     case '':
@@ -11,12 +10,15 @@ switch ($request) {
         require __DIR__ . '/Dashboard.php';
         break;
 
-    case '/admin':
-        require $baseDir. '/Admin/Dashboard.php';
+    case '/add-questions':
+        require __DIR__ . $baseDir . '/Questionform.php';
         break;
 
-    case '/user':
-        require __DIR__ . '/User/dashboard.php';
+    case '/manage-questions':
+        require __DIR__ . $baseDir . '/Managequestions.php';
+        break;
+    case '/user-data':
+        require __DIR__ . $baseDir . '/Userdata.php';
         break;
 
     default:

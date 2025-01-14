@@ -36,7 +36,7 @@
         <div class="container">
             <div class="form-container">
                 <h2>Register</h2>
-                <form method="POST" action="/Admin/">
+                <form method="POST" action="/Admin/Dashboard.php">
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
                         <input type="text" class="form-control" id="username" name="username"
